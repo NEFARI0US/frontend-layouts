@@ -1,0 +1,122 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/*variables*/
+:root
+{
+    --mainbg: hsl(233, 47%, 7%);
+    --cardbg: hsl(244, 38%, 16%);
+    --mainheading: hsl(0, 0%, 100%);
+    --accent: hsl(277, 64%, 61%);
+    --mainpara: hsla(0, 0%, 100%, 0.75);
+    --statheading: hsla(0, 0%, 100%, 0.6);
+}
+
+/*mobile*/
+body{
+    background: var(--mainbg);
+    color: var(--mainheading);
+    font-family: 'Inter', sans-serif;
+}
+
+.grid
+{
+    margin: 20% 5%;
+    background: var(--cardbg);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.pic
+{
+    height: 250px;
+    background-image: url('images/image-header-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.content
+{
+    padding: 5% 10%;
+}
+
+.mainheading
+{
+    font-weight: bold;
+    font-size: 175%;
+    display: inline;
+}
+
+#purple
+{
+    color: var(--accent);
+}
+
+.subtext
+{
+    font-size: 90%;
+    line-height: 170%;
+    padding: 5% 0;
+    color: var(--mainpara);
+}
+
+.figure
+{
+    display: block;
+    font-size: 1.5em;
+    padding: 3%;
+    font-weight: bolder;
+}
+
+.text
+{
+    text-transform: uppercase;
+    display: block;
+    font-size: 0.7em;
+    color: var(--statheading);
+}
+
+#companies, #templates, #queries
+{
+    padding: 3%;
+}
+
+
+/*desktop*/
+
+@media screen and (min-width:720px) 
+{
+    .grid
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 15%;
+        text-align: left;
+    }
+
+    .pic
+    {
+        grid-column: 2/3;
+        height: 100%;
+        background-image: url('images/image-header-desktop.jpg');
+        background-repeat: no-repeat;
+        border-radius: 0 10px 10px 0;
+        background-size: cover;
+    }
+
+    .content
+    {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-size: 25px;
+        padding: 10%;
+    }
+
+    .bottom
+    {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
